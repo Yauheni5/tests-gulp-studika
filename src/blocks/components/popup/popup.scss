@@ -1,0 +1,117 @@
+.popup {
+  &_active {
+    visibility: visible;
+  }
+  &__wrapper {
+    visibility: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &_active {
+      visibility: visible;
+    }
+  }
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  visibility: hidden;
+  width: 384px;
+  background: #fbfbfb;
+  box-shadow: 0px 7px 38px rgba(44, 62, 106, 0.25);
+  border-radius: 10px;
+  box-sizing: border-box;
+  &__input {
+    box-sizing: border-box;
+    margin: 24px 16px 0;
+    padding: 13px 25px;
+    border: 2px solid #abc8ea;
+    border-radius: 100px;
+    width: calc(100% - 32px);
+    height: 48px;
+    font-size: 14px;
+    line-height: 22px;
+    &:active,
+    &:focus,
+    &:hover {
+      outline-color: #abc8ea;
+    }
+  }
+  &__list-checked {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style: none;
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid #d8d8d8;
+    margin: 16px 16px 0;
+  }
+  &__element-checked {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0656b4;
+    transition: opacity 0.5s linear;
+    border-radius: 100px;
+    width: fit-content;
+    padding: 9px 17px 9px 17px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &__button-remove {
+    background-image: url("../../../img/svg/closeIcon.svg");
+    background-color: inherit;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: none;
+    color: white;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  &__list {
+    list-style: none;
+    max-height: 220px;
+    overflow: scroll;
+  }
+  &__element {
+    box-sizing: border-box;
+    transition: background-color 0.3s linear;
+    min-height: 40px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+  &__button {
+    opacity: 1;
+    transition: opacity 0.5s linear;
+    color: white;
+    background-color: #0656b4;
+    font-family: "Formular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

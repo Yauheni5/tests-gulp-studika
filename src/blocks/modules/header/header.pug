@@ -1,0 +1,18 @@
+header(class="header")
+  div(class="header__row")
+    button(class="header__burger" type="button")
+    a(href="#" class="logo") <img src="../../../img/svg/logo.svg">
+    div(class="header__city")
+      img(src="../../../img/svg/city.svg", alt="Кнопка выбора города" class="header__icon")
+      p(class="header__text") Москва
+    input(type="text" class="header__input" placeholder="Учебное заведение, специальность или профессия")
+    div(class="header__favorites")
+      img(src="../../../img/svg/like.svg", alt="Лайк" class="header__like")
+      p(class="header__counter") 1
+    div(class="header__profile")
+      p(class="header__login") Екатерина
+      img(src="../../../img/svg/avatar.svg" class="header__avatar")
+  // вставка меню
+  include ../../components/menu/menu
+  div(class="popup__wrapper")
+    include ../../components/popup/popup
