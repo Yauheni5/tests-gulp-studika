@@ -1,12 +1,7 @@
 div(class="popup")
-	input(type="text" class="popup__input" placeholder="Регион, город, населенный пункт")
+	div(class="popup__input-wrapper")
+		input(type="text" class="popup__input" placeholder="Регион, город, населенный пункт")
+		button(class="popup__input-clear")
 	ul(class="popup__list-checked")
-		li(class="popup__element-checked") Выбранный
-			button(type="button" class="popup__button-remove")
-		li(class="popup__element-checked") 132
-			button(type="button" class="popup__button-remove")
-		li(class="popup__element-checked") 312
-			button(type="button" class="popup__button-remove")
 	ul(class="popup__list")
-		li(class="popup__element") предложение
 	button(class="popup__button") Сохранить
