@@ -1,5 +1,6 @@
 import { getCities } from "../../state/cities";
 import { setButtonActive } from "./buttonSubmit";
+import { popupInput } from "./input";
 
 const listCities = document.querySelector(".popup__list");
 export const listChecked = document.querySelector(".popup__list-checked");
@@ -16,6 +17,7 @@ function handleListenerButtonsRemoveCityFilter() {
 }
 
 function checkCityFilter(e) {
+  popupInput.value = "";
   e.stopPropagation();
   const newElementChecked = e.currentTarget.cloneNode(true);
   newElementChecked.classList.add("popup__element-checked");
@@ -37,6 +39,7 @@ function checkCityFilter(e) {
   e.currentTarget.remove();
 
   setButtonActive();
+  renderCities();
 }
 
 export const addEventListenerElements = () => {

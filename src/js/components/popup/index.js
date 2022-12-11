@@ -1,6 +1,7 @@
 import { renderCities } from "./list";
 import "./input";
 import "./buttonSubmit";
+import { popupInput } from "./input";
 
 const popup = document.querySelector(".popup");
 const popupWrapper = document.querySelector(".header__popup-wrapper");
@@ -25,6 +26,7 @@ export const closePopupClick = (e) => {
 };
 
 export const openPopup = () => {
+  popupInput.value = "";
   popup.classList.add("popup_active");
   popupWrapper.classList.add("header__popup-wrapper_active");
   renderCities();
