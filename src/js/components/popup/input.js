@@ -5,8 +5,8 @@ import { addElementNode, addEventListenerElements, renderCities } from "./list";
 export const popupInput = document.querySelector(".popup__input");
 const popupButtonClearInput = document.querySelector(".popup__input-clear");
 
-const handleClearInput = (e) => {
-	e.target.value = "";
+const handleClearInput = () => {
+	popupInput.value = "";
 	popupButtonClearInput.classList.remove("popup__input-clear_active");
 	popupButtonClearInput.removeEventListener("click", handleClearInput);
 	renderCities();
@@ -20,7 +20,7 @@ popupInput.addEventListener("input", (e) => {
 		popupButtonClearInput.addEventListener("click", handleClearInput);
 	} else {
 		newElementsList.forEach((item) => item.remove());
-		handleClearInput(e);
+		handleClearInput();
 	}
 
 
